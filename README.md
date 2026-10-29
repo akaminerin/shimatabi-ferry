@@ -1,7 +1,6 @@
-Attempting to perform the InitializeDefaultDrives operation on the 'FileSystem' provider failed.
 # 島旅フェリー予約 — 共通フェリー予約プロトタイプ
 
-GitHub Pagesでは `.github/workflows/pages.yml` が `site/dist` を自動公開します。
+GitHub Pagesでは `.github/workflows/pages.yml` が `dist` を自動公開します。
 
 伊平屋島・伊是名島の2航路を共通UIで扱う、モバイル優先の操作可能プロトタイプです。すべてデモであり、本物の決済・予約登録・個人情報保存・メール送信は行いません。
 
