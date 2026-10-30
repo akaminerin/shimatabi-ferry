@@ -96,6 +96,7 @@ input,select,textarea{width:100%;max-width:100%;font-size:16px}
 .booking-section .island-info h2{padding-left:40px}
 @media(min-width:681px) and (max-width:900px){.home-screen .hero{min-height:500px}.booking-section .island-info h2{padding-left:36px}}
 @media(max-width:680px){.home-screen .hero{min-height:500px}.booking-section .island-info h2{padding-left:32px}}
+.booking-wrap.no-transition,.booking-wrap.no-transition .panel{animation:none!important}
 
 /* Guided booking v2 */
 .island-symbol{display:flex;align-items:center;gap:8px;color:#075a87;font-size:24px;font-weight:900}.island-symbol span{font-size:12px}.service-chip{width:max-content;max-width:100%;padding:5px 9px;border-radius:999px;background:#e7f6fa;color:#14637c;font-size:11px;font-weight:900}
