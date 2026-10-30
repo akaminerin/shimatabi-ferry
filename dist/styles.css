@@ -212,3 +212,36 @@ body{overflow-x:hidden}
   .demo{display:none}
 }
 
+/* Ocean theme across the reservation flow and staff console. */
+.booking-wrap{position:relative;z-index:1;isolation:isolate}
+.booking-wrap:after{content:"";position:fixed;z-index:0;inset:60px 0 0;pointer-events:none;background:
+  radial-gradient(circle at 8% 18%,#ffffff75 0 4px,transparent 5px),
+  radial-gradient(circle at 91% 32%,#ffffff66 0 7px,transparent 8px),
+  radial-gradient(circle at 16% 78%,#ffffff52 0 10px,transparent 11px),
+  radial-gradient(ellipse at 50% 100%,transparent 64%,#75d7e7 66% 70%,transparent 72%) 0 100%/150px 72px repeat-x,
+  linear-gradient(180deg,#dff6ff 0,#eefbff 44%,#d7f3f6 100%)}
+.booking-wrap>*{position:relative;z-index:1}
+.booking-head{position:relative;overflow:hidden;padding:24px;border:1px solid #ffffff8c;border-radius:24px;background:linear-gradient(135deg,#056b9d 0%,#078dc2 52%,#27b8c5 100%);box-shadow:0 18px 42px #075a8730;color:#fff}
+.booking-head:after{content:"";position:absolute;right:-45px;bottom:-55px;width:230px;height:110px;border:18px solid #ffffff1f;border-radius:50%;transform:rotate(-8deg)}
+.booking-head h1{position:relative;z-index:1;margin-top:14px;color:#fff;text-shadow:0 2px 8px #003f66aa}.booking-head p{position:relative;z-index:1;color:#e9fbff}.booking-head .secondary{position:relative;z-index:2;border-color:#ffffff70;background:#ffffffed;color:#075a87}.booking-head>.status{position:relative;z-index:2;border:1px solid #ffffff70;background:#fff}
+.stepper{padding:9px 12px;border-radius:999px;background:#ffffff9c;box-shadow:0 8px 20px #075a8714}.stepper i{background:#b9e6ef}.stepper i.on{background:linear-gradient(90deg,#078acb,#21bec5)}
+.booking-wrap .panel{position:relative;overflow:hidden;border:1px solid #b9e4ee;background:linear-gradient(180deg,#fffffff7,#f8feffed);box-shadow:0 18px 44px #075a8722}
+.booking-wrap .panel:before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:radial-gradient(ellipse at 50% 0,transparent 58%,#32b8d2 61% 70%,transparent 73%) 0 0/42px 16px repeat-x;opacity:.78}
+.booking-wrap .panel>small{display:inline-block;margin:2px 0 6px;padding:5px 10px;border-radius:999px;background:#def6fb;color:#0874a6;font-weight:900;letter-spacing:.06em}
+.booking-wrap .panel h2{color:#064d73}.booking-wrap .choice,.booking-wrap .sailing-card{border-color:#bfe5ed;background:linear-gradient(145deg,#fff,#f1fbfd)}
+.booking-wrap .choice:hover,.booking-wrap .sailing-card:hover{border-color:#3ab5d1}.booking-wrap .choice.selected,.booking-wrap .sailing-card.selected{border-color:#078acb;background:linear-gradient(145deg,#e9f9ff,#ddf8f5);box-shadow:0 12px 28px #078acb24}
+.booking-wrap .date-grid .field,.booking-wrap .counter{border:1px solid #c4e8ef;background:linear-gradient(145deg,#f5fcff,#ebfaf8)}
+.booking-wrap .field input,.booking-wrap .field select{border-color:#b9e1ea;background:#fff}.booking-wrap .notice{border-left:4px solid #27aec2;background:#e7f8fb;color:#164f66}
+.booking-wrap .current-spec{border-left-color:#21b5c7;background:linear-gradient(90deg,#dcf6fa,#eefcff)}
+.booking-wrap .summary{padding:8px 14px;border:1px solid #cae7ed;border-radius:16px;background:#f7fdff}.booking-wrap .summary div{border-bottom-color:#dceff3}
+.booking-wrap .conditions{border-color:#c8e7ed;background:#f1fbfd}.booking-wrap .pay-demo{background:linear-gradient(135deg,#075a87,#078fba 55%,#23b7be)}
+.booking-wrap .boarding-pass{border-color:#8fd1df;background:linear-gradient(180deg,#fff,#f0fbfd);box-shadow:0 18px 42px #075a8726}.booking-wrap .ticket>.ferrymaru{filter:drop-shadow(0 10px 6px #07547d44)}
+.booking-wrap .footer-note{color:#416b7d;font-weight:700}
+.admin-mode{background:linear-gradient(180deg,#e8f5fa,#eef5f7 45%,#e2f1f3)}.admin-mode .admin:before{background:linear-gradient(90deg,#073e66,#075f82)}.admin-mode .metric,.admin-mode .chart-card,.admin-mode .table,.admin-mode .search-card{border-color:#c8e2e9;background:#ffffffed}.admin-mode .metric{border-top:4px solid #27aeca}.admin-mode .bar-row div{background:#dceff3}.admin-mode .bar-row i{background:linear-gradient(90deg,#078acb,#22bfc4)}
+@media(max-width:680px){
+  .booking-head{padding:18px;border-radius:18px}.booking-head:after{right:-100px}.booking-head h1{font-size:27px}
+  .stepper{margin:16px 0;padding:7px 8px}
+  .booking-wrap .panel{border-radius:18px}
+  .booking-wrap:after{inset:60px 0 0;background-size:auto,auto,auto,110px 55px,auto}
+}
+
