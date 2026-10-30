@@ -270,7 +270,7 @@ body{overflow-x:hidden}
 .home-screen .speech,.home-screen .hero-scene,.home-screen .wave{display:none!important}
 .hero-waves{position:absolute;z-index:3;right:-4%;bottom:-1px;left:-4%;height:116px;overflow:hidden;pointer-events:none}
 .hero-wave{position:absolute;right:-3%;bottom:0;width:106%;height:100%;will-change:transform}
-.hero-wave path{fill:#f5fbfd}.hero-wave-back{opacity:.42;animation:coastalWaveBack 14s ease-in-out infinite alternate}.hero-wave-back path{fill:#d8f5fb}.hero-wave-front{height:86%;opacity:.96;animation:coastalWaveFront 18s ease-in-out infinite alternate}.hero-wave-front path{fill:#f6fbfd}
+.hero-wave path{fill:#f5fbfd}.hero-wave-back{opacity:.42;animation:coastalWaveBack 11s ease-in-out infinite alternate}.hero-wave-back path{fill:#d8f5fb}.hero-wave-front{height:86%;opacity:.96;animation:coastalWaveFront 14s ease-in-out infinite alternate}.hero-wave-front path{fill:#f6fbfd}
 @keyframes coastalWaveBack{from{transform:translate3d(-2%,7px,0)}to{transform:translate3d(3%,-3px,0)}}
 @keyframes coastalWaveFront{from{transform:translate3d(2%,3px,0)}to{transform:translate3d(-3%,-5px,0)}}
 .booking-section{position:relative;background:linear-gradient(180deg,#f6fbfd 0%,#fff 34%,#eef9fb 100%);padding:26px 20px 82px}
