@@ -90,6 +90,14 @@ input,select,textarea{width:100%;max-width:100%;font-size:16px}
   .table{width:100%;max-width:100%}
 }
 
+/* Guided booking v2 */
+.island-symbol{display:flex;align-items:center;gap:8px;color:#075a87;font-size:24px;font-weight:900}.island-symbol span{font-size:12px}.service-chip{width:max-content;max-width:100%;padding:5px 9px;border-radius:999px;background:#e7f6fa;color:#14637c;font-size:11px;font-weight:900}
+.booking-summary{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:14px 0;padding:10px 12px;border:1px solid #bfe4ec;border-radius:14px;background:#ffffffd9}.booking-summary>b{color:#075a87}.booking-summary span{padding:5px 8px;border-radius:999px;background:#eaf8fb;font-size:12px}.booking-summary button{padding:2px 5px;border:0;background:transparent;color:#0874a6;font-size:11px;text-decoration:underline}
+.field-error{margin:6px 0 0;padding:8px 10px;border-left:4px solid #d94848;border-radius:6px;background:#fff0f0;color:#a52020;font-size:13px;font-weight:800}
+.time-change{margin:10px 0;padding:9px;border-radius:9px;background:#fff0c9;color:#755600}.time-change b{display:inline-block;margin-left:6px;color:#9a3e00}.sailing-card:disabled{cursor:not-allowed;opacity:.72;background:#f1f4f5}.disabled-reason{display:block;margin-top:8px;color:#9c2e2e;font-weight:900}.stock{display:grid;gap:3px;margin:10px 0;padding:10px;border-radius:10px;background:#eaf7fa}.stock small{display:block}.contact-fields,.passenger-fields{margin:16px 0;padding:16px;border:1px solid #c8e7ed;border-radius:16px;background:#f7fdff}.contact-fields h3,.passenger-fields h3{margin-top:0}
+.hold-banner{display:flex;justify-content:space-between;gap:12px;margin:12px 0;padding:14px;border-radius:14px;background:#ddf5f8;color:#075a87}.reservation-detail{margin-top:20px}.urgent{margin:16px 0;padding:18px;border:2px solid #dc4141;border-radius:15px;background:#fff1f1;color:#8b1f1f}.urgent h2{color:#a32020!important}.future-feature{margin-top:20px;padding:16px;border:1px dashed #6faec0;border-radius:14px;background:#eff9fb}.summary b small{display:block;margin-top:4px;color:#617d87;font-size:10px}.lookup-screen .panel>.primary{width:100%;margin-top:8px}
+@media(max-width:680px){.booking-summary{display:grid;gap:6px}.booking-summary span{display:flex;justify-content:space-between}.island-symbol{font-size:20px}.contact-fields,.passenger-fields{padding:12px}.hold-banner{align-items:flex-start;flex-direction:column}}
+
 @media(max-width:360px){
   .brand-label{font-size:13px}
   .hero{padding-left:14px;padding-right:14px}
@@ -245,3 +253,39 @@ body{overflow-x:hidden}
   .booking-wrap:after{inset:60px 0 0;background-size:auto,auto,auto,110px 55px,auto}
 }
 
+/* Coastal visual system: one design language across nine separate screens. */
+.home-screen .hero{min-height:clamp(500px,58vw,680px);display:flex;align-items:center;position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,48,88,.78) 0%,rgba(0,72,118,.46) 38%,rgba(0,92,140,.1) 68%,transparent 100%),url("assets/okinawa-ferry-hero.png");background-position:center;background-size:cover}
+.home-screen .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,34,64,.08),transparent 55%,rgba(0,83,119,.13));pointer-events:none}
+.home-screen .hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin-inline:auto;padding:40px 0 118px;color:#fff}
+.home-screen .hero-inner .eyebrow{display:inline-flex;padding:8px 14px;border:1px solid rgba(255,255,255,.48);border-radius:999px;background:rgba(0,61,103,.2);backdrop-filter:blur(8px);font-size:13px;font-weight:800;letter-spacing:.08em}
+.home-screen .hero h1{max-width:680px;margin:20px 0 18px;color:#fff;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(50px,7vw,88px);font-weight:600;line-height:1.12;letter-spacing:.035em;text-shadow:0 3px 22px rgba(0,30,60,.42)}
+.home-screen .hero p{margin:0;color:#fff;font-size:clamp(16px,2vw,21px);font-weight:700;line-height:1.85;text-shadow:0 2px 12px rgba(0,33,64,.65)}
+.home-screen .speech,.home-screen .hero-scene,.home-screen .wave{display:none!important}
+.hero-waves{position:absolute;z-index:3;right:-4%;bottom:-1px;left:-4%;height:116px;overflow:hidden;pointer-events:none}
+.hero-wave{position:absolute;right:-3%;bottom:0;width:106%;height:100%;will-change:transform}
+.hero-wave path{fill:#f5fbfd}.hero-wave-back{opacity:.42;animation:coastalWaveBack 14s ease-in-out infinite alternate}.hero-wave-back path{fill:#d8f5fb}.hero-wave-front{height:86%;opacity:.96;animation:coastalWaveFront 18s ease-in-out infinite alternate}.hero-wave-front path{fill:#f6fbfd}
+@keyframes coastalWaveBack{from{transform:translate3d(-2%,7px,0)}to{transform:translate3d(3%,-3px,0)}}
+@keyframes coastalWaveFront{from{transform:translate3d(2%,3px,0)}to{transform:translate3d(-3%,-5px,0)}}
+.booking-section{position:relative;background:linear-gradient(180deg,#f6fbfd 0%,#fff 34%,#eef9fb 100%);padding:26px 20px 82px}
+.booking-container{width:min(1120px,100%);margin-inline:auto}.section-heading{text-align:center;margin-bottom:26px}.section-heading small{color:#1689ab;font-weight:900;letter-spacing:.18em}.section-heading .section-title{margin:8px 0 0;color:#073f63;font-size:clamp(27px,3vw,38px)}
+.booking-section .island-card{border:1px solid #cce7ee;box-shadow:0 16px 38px rgba(5,77,113,.12)}
+
+.booking-wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto;padding-bottom:64px}
+.booking-wrap:after{inset:60px 0 0;background:linear-gradient(180deg,#dff5fb 0%,#f9fcfd 30%,#fff 64%,#e8f7f8 100%)}
+.booking-head{min-height:190px;display:flex;align-items:flex-end;background-image:linear-gradient(90deg,rgba(0,53,92,.86),rgba(0,102,151,.54) 58%,rgba(18,155,181,.25)),url("assets/okinawa-ferry-hero.png");background-position:center 56%;background-size:cover}
+.booking-head:after{display:none}.booking-head h1{margin:16px 0 3px;font-size:clamp(28px,4vw,42px);font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:600;letter-spacing:.025em}.booking-head p{margin:0}
+.voyage-progress{display:grid;grid-template-columns:max-content minmax(120px,1fr) max-content;align-items:center;gap:12px;margin:18px 0 10px;padding:12px 18px;border:1px solid rgba(173,220,231,.8);border-radius:16px;background:rgba(255,255,255,.9);box-shadow:0 8px 22px rgba(5,83,117,.08);color:#0b5275;font-size:13px;font-weight:900}
+.voyage-line{position:relative;height:18px}.voyage-line:before{content:"";position:absolute;top:8px;right:0;left:0;height:3px;border-radius:99px;background:repeating-linear-gradient(90deg,#a6dce7 0 9px,transparent 9px 14px)}.voyage-line i{position:absolute;top:8px;left:0;width:var(--voyage-progress);height:3px;border-radius:99px;background:#08a3c5}.voyage-line b{position:absolute;z-index:2;top:50%;left:var(--voyage-progress);transform:translate(-50%,-58%);padding:0 4px;background:#fff;color:#087caf;font-size:20px;line-height:1;transition:left .45s ease}
+.stepper{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin:0 0 18px;padding:10px 12px;border-radius:16px}.stepper>span{display:grid;justify-items:center;gap:4px;min-width:0;color:#7893a0}.stepper>span i{display:block;width:100%;height:4px;border-radius:99px;background:#cce7ed}.stepper>span.on i{background:linear-gradient(90deg,#078acb,#20bdc3)}.stepper>span.current{color:#075b84}.stepper small{max-width:100%;overflow:hidden;font-size:10px;font-weight:800;text-overflow:ellipsis;white-space:nowrap}
+.booking-wrap .panel{border-radius:22px;padding-top:28px;animation:stepArrive .38s ease both}.booking-wrap .panel:before{height:4px;background:linear-gradient(90deg,#0a8ec1,#21c1c5 55%,#8adfdc);opacity:1}
+@keyframes stepArrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.sailing-route{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:18px 0 8px;padding:12px;border-radius:13px;background:#edf9fc;color:#075377}.sailing-route span{display:grid;gap:3px}.sailing-route span:last-child{text-align:right}.sailing-route small{font-size:12px}.sailing-route b{font-size:23px}.sailing-route i{color:#079cc0;font-style:normal;font-weight:900;letter-spacing:.1em}
+.booking-wrap .counter{position:relative;overflow:hidden;border-style:solid;border-left:5px solid #18aac2}.booking-wrap .counter:after{content:"";position:absolute;top:-8px;right:18px;width:1px;height:calc(100% + 16px);border-left:2px dashed #cce8ed;opacity:.85}
+.booking-wrap .summary{position:relative;overflow:hidden;border-left:5px solid #13a9c4;background-image:linear-gradient(180deg,#fff,#f4fcfd)}.booking-wrap .summary:after{content:"BOARDING DETAILS";position:absolute;right:14px;bottom:8px;color:#c7e6ec;font-size:11px;font-weight:900;letter-spacing:.12em}
+.arrival-ticket{text-align:center}.arrival-mark{display:grid;width:58px;height:58px;margin:0 auto 12px;place-items:center;border-radius:50%;background:linear-gradient(145deg,#0cb68e,#16c5a8);box-shadow:0 10px 24px rgba(12,182,142,.25);color:#fff;font-size:31px;font-weight:900}.arrival-ticket>p{color:#476d7e}.arrival-ticket .boarding-pass{text-align:left}.arrival-ticket .qr{display:block;max-width:240px;margin:20px auto 8px;border:12px solid #fff;box-shadow:0 10px 28px rgba(4,62,92,.15)}
+
+@media(max-width:760px){
+ .home-screen .hero{min-height:500px;background-position:61% center}.home-screen .hero-inner{width:calc(100% - 32px);padding:60px 0 112px}.home-screen .hero h1{font-size:clamp(44px,14vw,62px)}.home-screen .hero p{max-width:300px;font-size:15px}.hero-waves{height:82px}
+ .booking-section{padding:18px 16px 58px}.booking-wrap{width:100%;padding-inline:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}.booking-head{min-height:158px;padding:18px;background-position:56% center}.booking-head h1{font-size:27px}.voyage-progress{grid-template-columns:max-content minmax(60px,1fr) max-content;padding:10px 12px}.stepper{grid-template-columns:repeat(9,1fr);padding:9px 7px}.stepper small{display:none}.stepper>span i{height:5px}.booking-wrap .panel{padding:22px 14px}.sailing-route{gap:8px}.sailing-route b{font-size:20px}.sailing-route i{font-size:12px}.booking-wrap .counter:after{display:none}
+}
+@media(prefers-reduced-motion:reduce){.hero-wave-back,.hero-wave-front,.booking-wrap .panel{animation:none}.voyage-line b{transition:none}}
