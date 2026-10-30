@@ -4,9 +4,9 @@ export const QrStatus={UNUSED:'unused',USED:'used',CANCELLED:'cancelled',SUSPEND
 export const RefundStatus={NOT_REQUIRED:'not_required',ELIGIBLE:'eligible',REQUESTED:'requested',PROCESSING:'processing',COMPLETED:'completed',FAILED:'failed'};
 export const SailingStatus={OPERATING:'operating',CHANGED:'changed',LIMITED:'limited',EXTRA:'extra',SUSPENDED:'suspended',ALL_SUSPENDED:'all_suspended',UNCONFIRMED:'unconfirmed',MAINTENANCE:'maintenance'};
 
-export class InventoryService {
+export class ReservationCapacityService {
   /** DBトランザクション内で行ロックまたは楽観ロックを使用し、定員超過を防ぐ。 */
-  async createHold({sailingId,passengers,vehicleSpaceUnits,idempotencyKey}){ throw new Error('backend implementation required'); }
+  async createHold({sailingId,passengers,vehicleReservationUnits,idempotencyKey}){ throw new Error('backend implementation required'); }
   async confirmHold({holdId,paymentId}){ throw new Error('backend implementation required'); }
   async releaseHold({holdId,reason}){ throw new Error('backend implementation required'); }
 }
@@ -17,4 +17,3 @@ export const routePolicy={
 };
 
 export const roles={system_admin:['*'],iheya_admin:['iheya:*'],izena_admin:['izena:*'],port_staff:['reservation:read','boarding:write'],viewer:['*:read']};
-
