@@ -119,3 +119,20 @@ input,select,textarea{width:100%;max-width:100%;font-size:16px}
 .ticket{min-width:0;overflow:hidden}.confetti{position:fixed;inset:0;z-index:70;overflow:hidden;pointer-events:none}.confetti span{position:absolute}.qr-id{overflow-wrap:anywhere}
 .date-grid,.date-grid .field{min-width:0;max-width:100%}.date-grid .field{overflow:hidden}.date-grid input[type="date"]{display:block;inline-size:100%;max-inline-size:100%;min-inline-size:0;box-sizing:border-box;overflow:hidden}.panel input,.panel select,.panel textarea{min-width:0;max-width:100%;box-sizing:border-box}
 @media(max-width:680px){.date-grid .field{width:100%;padding:12px}.date-grid input[type="date"]{height:52px;padding:10px;font-size:16px}.panel{overflow:hidden}}
+
+/* Desktop home composition: keep controls below the decorative hero and use the full canvas. */
+.content{margin-top:0!important;transform:none;padding-top:48px;background:linear-gradient(180deg,#f6fbfe 0,#f3f7fa 100%)}
+.section-title{position:relative;margin-top:0!important;margin-bottom:22px}
+.route-grid{position:relative}
+@media(min-width:1100px){
+  .content{width:min(1500px,100%);padding-left:clamp(28px,4vw,72px);padding-right:clamp(28px,4vw,72px)}
+  .route-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:1400px;padding:20px;gap:20px}
+  .route-card{display:grid;grid-template-columns:minmax(150px,190px) minmax(0,1fr);grid-template-rows:repeat(7,auto);align-items:start;min-height:315px;padding:18px;gap:7px 22px}
+  .route-card .art{grid-column:1;grid-row:1/8;width:100%;height:100%;min-height:260px;margin:0}
+  .route-card .route,.route-card h2,.route-card>p,.route-card .row{grid-column:2}
+  .route-card .primary{grid-column:2;grid-row:auto;width:100%;min-height:52px;margin-top:6px}
+  .route-card>p:last-child{text-align:center}
+  .today{max-width:1400px}
+}
+@media(min-width:681px) and (max-width:1099px){.content{padding-top:38px}.route-grid{max-width:1000px}}
+@media(max-width:680px){.content{padding-top:24px}.section-title{margin-bottom:14px}}
