@@ -1,3 +1,5 @@
+import { DEMO_MODE, routeMaster, demoOperationStatus, demoReservationCapacity, demoBookings, operationLabels, reservationLabels } from './data/config.js';
+
 const app=document.querySelector('#app'),SESSION_KEY='shimatabi-booking-draft-v3',ISLAND_IMAGE_KEY='shimatabi-island-images-v1';
 const labels=['出発方向','片道・往復','乗船日','便','人数','乗船者','確認','決済','完了'];
 const isoDate=d=>new Date(Date.now()+d*86400000).toISOString().slice(0,10),addDays=(date,d)=>{const[y,m,day]=date.split('-').map(Number);return new Date(Date.UTC(y,m-1,day+d)).toISOString().slice(0,10)},yen=n=>`${Number(n||0).toLocaleString('ja-JP')}円`,escapeHtml=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])),ferry=()=>document.querySelector('#ferrymaru').innerHTML;
