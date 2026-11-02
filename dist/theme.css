@@ -20,8 +20,8 @@ body:not(.admin-mode):has(.booking-wrap) .nav{height:78px!important;background:#
 @media(max-width:760px){.home-screen .hero{min-height:480px!important}.home-screen .hero h1{font-size:48px!important}.home-screen .hero p{font-size:15px!important}.home-screen .hero-waves{height:72px!important}.section-heading .section-title{font-size:27px!important}.booking-section .island-card{min-height:240px!important}.booking-section .island-card .art{min-height:240px!important}.booking-section .island-info{padding:16px 14px 8px!important}.booking-section .island-actions{padding:0 14px 14px!important}.island-description{font-size:12px!important}}
 
 /* Faster, still calm coastal motion. */
-.hero-wave-back{animation:coastalWaveBackFast 3.8s ease-in-out infinite alternate!important}.hero-wave-front{animation:coastalWaveFrontFast 4.8s ease-in-out infinite alternate!important}
-@keyframes coastalWaveBackFast{from{transform:translate3d(-5%,14px,0) scaleY(.92)}to{transform:translate3d(5%,-9px,0) scaleY(1.08)}}
+.hero-wave-back{animation:coastalWaveBackFast 3.4s ease-in-out infinite alternate!important}.hero-wave-front{animation:none!important;transform:translate3d(0,1px,0)!important}
+@keyframes coastalWaveBackFast{from{transform:translate3d(-7%,20px,0) scaleY(.86)}to{transform:translate3d(7%,-15px,0) scaleY(1.18)}}
 @keyframes coastalWaveFrontFast{from{transform:translate3d(4%,10px,0) scaleY(1.08)}to{transform:translate3d(-5%,-12px,0) scaleY(.94)}}
 
 /* Staff-managed island imagery. */
@@ -54,9 +54,9 @@ body:not(.admin-mode):has(.booking-wrap) .nav{height:68px!important}.booking-hea
 @media(max-width:760px){.booking-head{min-height:132px!important;padding:18px 16px 36px!important}.booking-head h1{font-size:26px!important}.booking-head p{font-size:12px!important}.booking-head-waves{height:36px!important}.booking-body{padding-inline:16px!important}.voyage-progress{height:40px!important;min-height:40px!important}.voyage-line b{font-size:24px!important}.mobile-step-count{margin-top:4px!important}.selected-island-card{grid-template-columns:52px 40px minmax(0,1fr);min-height:60px;margin:6px auto;padding:8px}.selected-island-photo{width:52px;height:44px}.selected-island-emblem{width:40px;height:32px}.selected-island-card b{font-size:16px!important}.selected-island-card .secondary{grid-column:1/4;min-height:40px;height:40px}.booking-wrap .panel{padding-top:4px!important}.booking-wrap .panel h2{text-align:left!important;font-size:28px!important}.booking-wrap .panel h2:after{margin:10px 0!important}.question-help{text-align:left!important;margin-bottom:12px!important}.booking-wrap .choice-grid{gap:12px!important;margin:12px auto!important}.direction-choice{height:auto!important;min-height:0!important;padding:20px!important}.direction-choice strong{font-size:19px!important;white-space:normal}.port-route{grid-template-columns:1fr!important;gap:4px;font-size:18px!important}.port-route i{justify-content:center;transform:rotate(90deg);margin:2px auto}.port-route i span{width:24px;flex:0 0 24px}.booking-wrap .actions{gap:12px!important;margin-top:16px!important}.booking-wrap .actions .primary,.booking-wrap .actions .secondary{width:100%;min-width:0;height:52px;padding-inline:12px;font-size:15px}.booking-demo-badge{top:8px}.choice:active{transform:scale(.99)!important}}
 
 /* Faster, wider two-layer wave motion across the booking flow. */
-.booking-head-waves i{animation:bookingWaveAFast 3.6s ease-in-out infinite alternate!important}
-.booking-head-waves i+i{animation:bookingWaveBFast 4.5s ease-in-out infinite alternate!important}
-@keyframes bookingWaveAFast{from{transform:translateX(-5%) translateY(8px) scaleY(.9)}to{transform:translateX(5%) translateY(-8px) scaleY(1.1)}}
+.booking-head-waves i{animation:bookingWaveAFast 3.4s ease-in-out infinite alternate!important}
+.booking-head-waves i+i{animation:none!important;transform:translateY(1px)!important}
+@keyframes bookingWaveAFast{from{transform:translateX(-7%) translateY(13px) scaleY(.84)}to{transform:translateX(7%) translateY(-12px) scaleY(1.2)}}
 @keyframes bookingWaveBFast{from{transform:translateX(5%) translateY(7px) scaleY(1.08)}to{transform:translateX(-5%) translateY(-9px) scaleY(.92)}}
 
 /* Landing visual v2: supplied-reference composition and project-owned defaults. */
