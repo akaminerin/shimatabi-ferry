@@ -1,4 +1,3 @@
-Attempting to perform the InitializeDefaultDrives operation on the 'FileSystem' provider failed.
 import { DEMO_MODE, routeMaster, demoOperationStatus, demoReservationCapacity, demoBookings, operationLabels, reservationLabels } from './data/config.js';
 
 const app=document.querySelector('#app'),SESSION_KEY='shimatabi-booking-draft-v3',ISLAND_IMAGE_KEY='shimatabi-island-images-v1';
