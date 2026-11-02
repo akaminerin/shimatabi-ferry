@@ -122,3 +122,67 @@ body:not(.admin-mode):has(.booking-wrap) .nav{height:68px!important}.booking-hea
 @media(max-width:760px){.booking-section .island-card{aspect-ratio:auto!important;min-height:118px!important}.booking-section .island-media,.booking-section .island-card .art{min-height:118px!important}.booking-section .island-title{grid-template-columns:42px minmax(0,1fr)!important}.booking-section .island-emblem{width:42px!important;height:39px!important}.reference-arrow{width:28px!important;height:31px!important}}
 @media(min-width:761px) and (max-width:1024px){.booking-body{width:calc(100% - 48px)!important}.direction-choice{height:220px!important}.booking-wrap .panel h2{font-size:34px!important}}
 
+/* One reservation flow, one component tree: viewport width only changes presentation. */
+.booking-wrap{width:100%!important;max-width:none!important;margin:0!important;padding:0 0 96px!important}
+.booking-body{width:min(1180px,calc(100% - 48px))!important;margin-inline:auto!important;padding-inline:0!important}
+.booking-wrap .panel{width:100%;min-width:0}
+.booking-wrap .stepper{display:grid!important;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;overflow:visible}
+.booking-wrap .stepper>span{display:grid;min-width:0;gap:7px;text-align:center}
+.booking-wrap .stepper>span i{display:block;width:100%;height:6px;border-radius:999px;background:#d6eaf2}
+.booking-wrap .stepper>span.on i{background:linear-gradient(90deg,#0c7dd9,#22b5e8)}
+.booking-wrap .stepper small{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#58758a;font-size:11px;font-weight:800}
+.booking-wrap .stepper .current small{color:#083b72}
+.booking-wrap .actions{position:static;width:auto;margin-top:24px}
+
+@media(max-width:760px){
+  body:not(.admin-mode):has(.booking-wrap){padding-bottom:86px}
+  .booking-wrap{padding-bottom:112px!important}
+  .booking-head{min-height:112px!important;padding:15px 16px 30px!important}
+  .booking-head h1{margin-top:8px!important;font-size:24px!important}
+  .booking-head p,.booking-head .booking-hero-copy>small{display:none}
+  .booking-body{width:100%!important;margin:0!important;padding-inline:14px!important}
+  .voyage-progress{margin-top:4px!important}
+  .booking-wrap .stepper{position:relative!important;display:grid!important;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin:6px 0 10px!important;padding:23px 0 0!important}
+  .booking-wrap .stepper:before{content:attr(data-step-count)!important;display:block!important;position:absolute;inset:2px 0 auto;text-align:center;color:#245b78;font-size:10px;font-weight:900;letter-spacing:.08em}
+  .booking-wrap .stepper>span{display:block!important}
+  .booking-wrap .stepper>span i{height:5px!important}
+  .booking-wrap .stepper small{display:none!important}
+  .selected-island-card{grid-template-columns:50px 38px minmax(0,1fr) auto!important;gap:8px!important;margin:5px 0 8px!important;padding:7px 8px!important}
+  .selected-island-photo{width:50px!important;height:42px!important}
+  .selected-island-emblem{width:38px!important;height:31px!important}
+  .selected-island-card .secondary{grid-column:auto!important;width:auto!important;min-height:38px!important;height:38px!important;padding:7px 10px!important;font-size:11px!important}
+  .booking-summary{margin-block:6px!important;padding:8px!important}
+  .booking-summary span{font-size:11px!important}
+  .booking-wrap .panel{padding:14px 12px 18px!important;border-radius:16px!important}
+  .booking-wrap .panel>small{display:none}
+  .booking-wrap .panel h2{margin:2px 0 10px!important;font-size:24px!important;line-height:1.25;text-align:left!important}
+  .booking-wrap .panel h2:after{margin:7px 0!important}
+  .question-help,.booking-wrap .panel>.notice,.booking-wrap .panel>.current-spec{display:-webkit-box;overflow:hidden;margin:0 0 8px!important;-webkit-box-orient:vertical;-webkit-line-clamp:1;font-size:11px!important;line-height:1.5}
+  .booking-wrap .choice-grid,.booking-wrap .sailings,.direction-grid{grid-template-columns:1fr!important;gap:8px!important;margin:8px 0!important}
+  .booking-wrap .choice,.direction-choice{min-height:0!important;padding:13px 14px!important}
+  .direction-choice strong,.booking-wrap .choice strong{font-size:17px!important}
+  .direction-note{display:none!important}
+  .port-route{margin-top:6px!important;font-size:14px!important}
+  .booking-wrap .sailing-card{padding:12px!important}
+  .sailing-card .sailing-route{gap:8px!important}
+  .sailing-card .stock small,.sailing-card>p{display:none}
+  .date-grid{gap:8px!important;margin:6px auto!important}
+  .date-grid .field{min-height:0!important;margin:0!important;padding:10px!important}
+  .date-grid input[type="date"]{height:48px!important}
+  .controls{gap:8px!important}
+  .counter{padding:10px 12px!important}
+  .counter button{width:40px!important;height:40px!important;flex-basis:40px!important}
+  .contact-fields,.passenger-fields{padding:10px!important}
+  .field{margin:8px 0!important}
+  .field input{padding:12px!important}
+  .booking-wrap .actions{position:fixed!important;left:0;right:0;bottom:0;z-index:55;width:100%!important;margin:0!important;padding:10px 14px max(10px,env(safe-area-inset-bottom))!important;border:1px solid #dcecf5;border-width:1px 0 0;border-radius:0!important;background:rgba(255,255,255,.96)!important;box-shadow:0 -8px 24px #083b7220!important;backdrop-filter:blur(12px)}
+  .booking-wrap .actions .primary,.booking-wrap .actions .secondary{height:50px!important;min-width:0!important;flex:1;padding:10px!important;font-size:14px!important}
+  .footer-note{margin-top:15px!important}
+}
+
+@media(max-width:420px){
+  .selected-island-card{grid-template-columns:46px 34px minmax(0,1fr)!important}
+  .selected-island-card .secondary{display:none}
+  .booking-wrap .panel h2{font-size:22px!important}
+}
+
